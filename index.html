@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blair Services LLC | Cape Girardeau, MO</title>
+  <meta name="description" content="Blair Services LLC connects you with Even Flow Power Wash and Blair Handyman Services in Cape Girardeau, Jackson, and surrounding areas.">
+
+  <style>
+    :root {
+      --navy: #173f67;
+      --blue: #1d6d9b;
+      --orange: #e8752c;
+      --charcoal: #2d3338;
+      --muted: #6f7780;
+      --line: #dfe4e8;
+      --bg: #e8f1f8;
+      --white: #ffffff;
+      --shadow: 0 14px 34px rgba(28, 45, 60, 0.10);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--charcoal);
+      background: var(--bg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-accent {
+      height: 5px;
+      background: linear-gradient(
+        90deg,
+        var(--blue) 0 47%,
+        var(--orange) 47% 53%,
+        var(--navy) 53% 100%
+      );
+    }
+
+    .site-header {
+      background: linear-gradient(180deg, #f8fbfd 0%, #eef5fa 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 24px 0 22px;
+      text-align: center;
+    }
+
+    .umbrella-logo {
+      width: min(100%, 540px);
+      margin: 0 auto;
+    }
+
+    .tagline {
+      margin: 18px 0 0;
+      font-size: clamp(1.1rem, 4.5vw, 1.55rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .subtag {
+      margin: 6px 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    main {
+      flex: 1;
+      width: min(calc(100% - 28px), var(--max-width));
+      margin: 0 auto;
+      padding: 26px 0 34px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      min-height: 100%;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+    }
+
+    .service-card:focus-visible {
+      outline: 3px solid rgba(29, 109, 155, 0.30);
+      outline-offset: 4px;
+    }
+
+    .service-visual {
+      position: relative;
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      padding: 28px 24px;
+      overflow: hidden;
+    }
+
+    .service-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #dcecf7, #eef6fb);
+      transition: transform 260ms ease;
+    }
+
+    .service-logo-wrap {
+      position: relative;
+      z-index: 1;
+      width: min(88%, 410px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .service-logo {
+      max-height: 150px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .service-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 22px 26px;
+      text-align: center;
+    }
+
+    .service-content h2 {
+      margin: 0;
+      font-size: clamp(1.28rem, 5vw, 1.65rem);
+      line-height: 1.2;
+    }
+
+    .service-content p {
+      margin: 10px 0 22px;
+      max-width: 36rem;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .button {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      width: 100%;
+      padding: 13px 20px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .service-card.handyman .button {
+      background: #2f3438;
+    }
+
+    .card-arrow {
+      margin-left: 9px;
+      font-size: 1.15em;
+      line-height: 1;
+    }
+
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .footer-inner {
+      width: min(calc(100% - 32px), var(--max-width));
+      margin: 0 auto;
+      padding: 22px 0 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .footer-inner strong {
+      color: var(--charcoal);
+    }
+
+    @media (min-width: 720px) {
+      .header-inner {
+        padding: 30px 0 26px;
+      }
+
+      main {
+        padding-top: 34px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .service-visual {
+        min-height: 255px;
+      }
+
+      .service-content {
+        padding: 26px 28px 30px;
+      }
+
+      .contact-actions {
+        grid-template-columns: repeat(2, minmax(0, 220px));
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .service-card:hover {
+        transform: translateY(-4px);
+        border-color: #cfd6db;
+        box-shadow: 0 20px 46px rgba(28, 45, 60, 0.14);
+      }
+
+      .button {
+        width: auto;
+        min-width: 190px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-shell">
+    <div class="top-accent" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <img
+          class="umbrella-logo"
+          src="blair-services-logo.png"
+          alt="Blair Services LLC"
+        >
+
+        <p class="tagline">Two Trusted Services. One Local Company.</p>
+        <p class="subtag">Serving Cape Girardeau, Jackson &amp; surrounding areas.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="services-grid" aria-label="Blair Services companies">
+
+        <a
+          class="service-card even-flow"
+          href="https://www.evenflowpowerwash.com"
+          aria-label="Visit Even Flow Power Wash"
+        >
+          <div class="service-visual">
+            <div class="service-logo-wrap">
+              <img
+                class="service-logo"
+                src="even-flow-logo.png"
+                alt="Even Flow Power Wash"
+              >
+            </div>
+          </div>
+
+          <div class="service-content">
+            <h2>Pressure Washing &amp; Exterior Cleaning</h2>
+            <p>
+              House washing, concrete cleaning, decks, fences and exterior
+              cleaning for homes and properties.
+            </p>
+            <span class="button">
+              Visit Even Flow
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+
+        <a
+          class="service-card handyman"
+          href="https://www.blairhandymanservices.com"
+          aria-label="Visit Blair Handyman Services"
+        >
+          <div class="service-visual">
+            <div class="service-logo-wrap">
+              <img
+                class="service-logo"
+                src="blair-handyman-logo.png"
+                alt="Blair Handyman Services"
+              >
+            </div>
+          </div>
+
+          <div class="service-content">
+            <h2>Repairs, Maintenance &amp; Small Projects</h2>
+            <p>
+              Home repairs, installations, maintenance, carpentry and
+              the small jobs that keep your home working the way it should.
+            </p>
+            <span class="button">
+              Visit Blair Handyman
+              <span class="card-arrow" aria-hidden="true">→</span>
+            </span>
+          </div>
+        </a>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <strong>Blair Services LLC</strong><br>
+        Cape Girardeau, Missouri<br>
+        &copy; <span id="year"></span> Blair Services LLC
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
