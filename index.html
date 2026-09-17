@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blair Services LLC</title>
+  <meta name="description" content="Blair Services LLC connects you with Even Flow Power Wash and Blair Handyman Services in Cape Girardeau, Jackson, and surrounding areas.">
+  <style>
+    :root{
+      --blue-1:#7ea8fb;
+      --blue-2:#9fc0ff;
+      --blue-3:#dcebff;
+      --navy:#1b4f86;
+      --orange:#f47a20;
+      --charcoal:#2e343a;
+      --muted:#66707a;
+      --white:#ffffff;
+      --line:rgba(39,54,71,.14);
+      --shadow:0 12px 28px rgba(24,42,66,.10);
+      --radius:22px;
+      --max:1060px;
+    }
+
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--charcoal);
+      background:linear-gradient(180deg,var(--blue-2) 0%, var(--blue-3) 16%, var(--blue-1) 52%, var(--blue-3) 100%);
+      min-height:100vh;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+
+    .top-accent{
+      height:5px;
+      background:linear-gradient(90deg,#2a74c8 0 48%, var(--orange) 48% 52%, #1b4f86 52% 100%);
+    }
+
+    .page{
+      width:min(calc(100% - 24px), var(--max));
+      margin:0 auto;
+      padding:12px 0 20px;
+    }
+
+    .hero{
+      text-align:center;
+      padding:10px 0 12px;
+    }
+
+    .hero-logo-box{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:min(100%, 760px);
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(255,255,255,.55);
+      border-radius:18px;
+      box-shadow:0 8px 22px rgba(22,40,64,.06);
+      padding:10px 16px;
+      backdrop-filter: blur(2px);
+    }
+
+    .hero-logo{
+      width:min(100%, 620px);
+      max-height:92px;
+      object-fit:contain;
+    }
+
+    .hero-tagline{
+      margin:10px 0 0;
+      font-weight:800;
+      font-size:clamp(1rem, 3.8vw, 1.55rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+      white-space:nowrap;
+    }
+
+    .hero-subtag{
+      margin:5px 0 0;
+      font-size:clamp(.84rem, 2.8vw, 1rem);
+      color:var(--muted);
+      line-height:1.15;
+      white-space:nowrap;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .card-body{
+      display:grid;
+      grid-template-columns:120px minmax(0,1fr);
+      gap:14px;
+      align-items:center;
+      padding:16px 16px 12px;
+    }
+
+    .logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .service-logo{
+      width:110px;
+      max-height:110px;
+      object-fit:contain;
+    }
+
+    .copy h2{
+      margin:0;
+      font-size:clamp(1.02rem, 4vw, 1.35rem);
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+
+    .copy p{
+      margin:8px 0 0;
+      font-size:clamp(.9rem, 3vw, .98rem);
+      line-height:1.35;
+      color:var(--muted);
+    }
+
+    .button-wrap{
+      padding:0 16px 16px;
+    }
+
+    .cta{
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:14px 18px 16px;
+      border-radius:14px;
+      border:1px solid rgba(39,54,71,.15);
+      background:#fff;
+      color:var(--charcoal);
+      font-weight:800;
+      font-size:clamp(1rem, 3.9vw, 1.15rem);
+      box-shadow:0 8px 16px rgba(23,49,77,.08);
+      overflow:hidden;
+    }
+
+    .cta::after{
+      content:"";
+      position:absolute;
+      left:0; right:0; bottom:0;
+      height:7px;
+      background:linear-gradient(90deg, #2f80ed, #5ca2ff);
+    }
+
+    .handyman .cta::after{
+      background:linear-gradient(90deg, #ff8f34, #ee6a10);
+    }
+
+    .arrow{font-size:1.1em; line-height:1}
+
+    @media (min-width:740px){
+      .page{padding:18px 0 28px}
+      .hero{padding-top:14px}
+      .hero-logo{max-height:104px}
+      .services{grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin-top:14px}
+      .card-body{grid-template-columns:140px minmax(0,1fr); gap:18px; padding:18px 18px 14px}
+      .service-logo{width:128px; max-height:128px}
+      .copy h2{font-size:1.45rem}
+      .copy p{font-size:1rem}
+    }
+
+    @media (max-width:430px){
+      .page{width:min(calc(100% - 16px), var(--max));}
+      .hero-logo-box{padding:8px 10px}
+      .hero-logo{max-height:78px}
+      .hero-tagline{font-size:1rem}
+      .hero-subtag{font-size:.82rem}
+      .card-body{grid-template-columns:104px minmax(0,1fr); gap:12px; padding:14px 14px 10px}
+      .service-logo{width:98px; max-height:98px}
+      .copy h2{font-size:1rem}
+      .copy p{font-size:.86rem}
+      .button-wrap{padding:0 14px 14px}
+      .cta{min-height:50px; font-size:1rem}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *{transition:none!important; animation:none!important; scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+  <div class="top-accent"></div>
+
+  <div class="page">
+    <header class="hero">
+      <div class="hero-logo-box">
+        <img class="hero-logo" src="blair-services-logo.png" alt="Blair Services LLC">
+      </div>
+      <p class="hero-tagline">Two Trusted Services. One Local Company.</p>
+      <p class="hero-subtag">Serving Cape Girardeau, Jackson &amp; surrounding areas.</p>
+    </header>
+
+    <main class="services" aria-label="Service options">
+      <a class="card evenflow" href="https://www.evenflowpowerwash.com" aria-label="Visit Even Flow Power Wash">
+        <div class="card-body">
+          <div class="logo-wrap">
+            <img class="service-logo" src="even-flow-logo.png" alt="Even Flow Power Wash">
+          </div>
+          <div class="copy">
+            <h2>Pressure Washing &amp; Exterior Cleaning</h2>
+            <p>House washing, concrete cleaning, decks, fences &amp; exterior cleaning for homes and properties.</p>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <div class="cta">Visit Even Flow <span class="arrow" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+
+      <a class="card handyman" href="https://www.blairhandymanservices.com" aria-label="Visit Blair Handyman Services">
+        <div class="card-body">
+          <div class="logo-wrap">
+            <img class="service-logo" src="blair-handyman-logo.png" alt="Blair Handyman Services">
+          </div>
+          <div class="copy">
+            <h2>Repairs, Maintenance &amp; Small Projects</h2>
+            <p>Home repairs, installations, maintenance, carpentry &amp; the small jobs that keep your home working right.</p>
+          </div>
+        </div>
+        <div class="button-wrap">
+          <div class="cta">Visit Blair Handyman <span class="arrow" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+    </main>
+  </div>
+</body>
+</html>
